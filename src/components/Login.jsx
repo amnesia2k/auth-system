@@ -47,11 +47,11 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <Toaster richColors position="top-right" />
-      <Card className="w-[60%] py-10 flex flex-col gap-5">
+      <Card className="w-full md:w-[60%] py-10 mx-5 flex flex-col gap-5">
         <h1 className="text-center text-2xl font-bold">Login to continue</h1>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-[70%] mx-auto flex flex-col gap-[10px]"
+          className="w-[90%] mx-auto flex flex-col gap-[10px]"
         >
           <div>
             <Label htmlFor="email" className="text-lg font-medium">
@@ -104,7 +104,7 @@ const Login = () => {
           <Button
             type="submit"
             disabled={isLoading}
-            className="flex justify-center items-center w-[60%] mx-auto"
+            className="flex justify-center items-center w-[85%] md:w-[60%] mx-auto"
           >
             {isLoading ? (
               <>
@@ -114,7 +114,7 @@ const Login = () => {
               "Login"
             )}
           </Button>
-          <h1 className="text-black font-medium">
+          <h1 className="text-black font-medium text-center md:text-base text-xs">
             <span className="text-muted-foreground font-normal">
               Don&apos;t have an account?
             </span>{" "}
